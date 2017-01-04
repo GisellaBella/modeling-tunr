@@ -7,14 +7,14 @@ function index(req, res) {
 	});
 }
 
-// function show(req, res) {
-//   Manager.findById(req.params.id)
-//   .then(function(manager){
-//     if(!manager) return error(res, "not found");
+function show(req, res) {
+  Manager.findById(req.params.id)
+  .then(function(manager){
+    if(!manager) return error(res, "not found");
 
-//     res.json(manager);
-//   });	
-// }
+    res.json(manager);
+  });	
+}
 
 module.exports.index = index;
-// module.exports.show = show;
+module.exports.show = show;

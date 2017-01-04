@@ -27,7 +27,7 @@ router.get('/api/managers', managersController.index);
 
 
 //show
-// router.get('/api/managers/:id', managersController.show);
+router.get('/api/managers/:id', managersController.show);
 
 
 //Song Routes

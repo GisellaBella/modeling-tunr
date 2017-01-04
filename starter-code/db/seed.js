@@ -10,17 +10,18 @@ var artistCreate = function() {
   });
 };
 
-// var managerCreate = function() {
-// 	return DB.Manager.create({
-//     name: 'Mr. Man',
-//     email: 'mrman@gmgmgm.com',
-//     office_number: '111222333',
-//     cell_phone_number: '44444444'
-// });
-// };
+var managerCreate = function() {
+	return DB.Manager.create({
+    name: 'Mr. Man',
+    // email: 'mrman@gmgmgm.com',
+    // office_number: '111222333',
+    // cell_phone_number: '44444444'
+});
+};
 
 // managerCreate (); 
-artistCreate () 
+artistCreate ()
+.then(managerCreate())
 .then(function() {
 	process.exit();
 

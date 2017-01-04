@@ -45,7 +45,7 @@ angular.module("tunrApp", ['ngRoute'])
 			// index
 			.when('/managers', {
 				templateUrl: '/templates/managers/index.html',
-				controller: "ManagerIndexController as managersController"
+				controller: "ManagerIndexController as managerController"
 			})
 
 
