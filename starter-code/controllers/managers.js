@@ -7,10 +7,16 @@ function index(req, res) {
 	});
 }
 
+function create(req, res) {
+	Manager.create(req.body).then(function(manager){
+    if(!manager) return error(res, "not saved");
+    res.json(manager);
+  });
+}
 function show(req, res) {
   Manager.findById(req.params.id)
   .then(function(manager){
-    if(!manager) return error(res, "not found");
+    // if(!manager) return error(res, "not found");
 
     res.json(manager);
   });	
@@ -18,3 +24,4 @@ function show(req, res) {
 
 module.exports.index = index;
 module.exports.show = show;
+module.exports.create = create;
