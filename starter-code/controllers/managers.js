@@ -17,7 +17,6 @@ function show(req, res) {
   Manager.findById(req.params.id)
   .then(function(manager){
     // if(!manager) return error(res, "not found");
-
     res.json(manager);
   });	
 }
